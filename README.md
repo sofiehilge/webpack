@@ -107,6 +107,12 @@ devServer: {
 
 25. man kan teste ved at skrive npm run og så navnet på pakken vi har hentet.
 
+26. HVIS du bare har hentet filen ned, så har den ikke nodemodules med da denne er for stor til at blive uploadet og ligger i .gitignore
+
+åben projektet:
+- kør: npm install
+
+-> dette vil oprette nodemodules og hente alle filerne.
 
 ---Opfølgning på i går:
 
@@ -136,3 +142,20 @@ Fordi;
 
 ---webpack---
 - er en bundler, den kan konfigureres således at den køre med babbel som kan konvertere vores js (Sikker js) så browseren kan læse den og også køre en transpiler der kan oversætte vores filer til en syntax.
+
+OPGAVE:
+1. installer axios i webpack projektet: npm i axios
+2. brug axios: import axios from "axios" -> skrives i index.js filen.
+3. den vil formentlig autocomplete linjen, da vi har webpack installeret.
+4. i index.js har vi noget innerHTMl: "Hello webpack", skal være lig med APIdata (icanhazdadjoke.com)
+5. se footer med api link icanhazdadjoke.com/api
+6. fecth a random joke -> viser link til et endpoint med tilfældig joke.
+7. Der skal laves en header for at få api Dataen tilbage i et format vi kan bruge.
+7a. se insomnia, indsæt link, vælg header, application/json -> får data i et format der virker.
+8. se i Axios documentation hvordan tilføjer Accept header til axiosget() "How to add headers to axios call"
+
+    accept: application/json
+
+----HUSK: altid bare et key:value pair, se hvordan syntaxen er i json, se hvordan den er anderledes i javascript.
+
+9. husk hvis du ikke kan se resultatet i browseren så køre npm run dev så at det kan ses i browseren.
