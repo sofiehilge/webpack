@@ -15,6 +15,12 @@
     "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "node-sass": "^8.0.0",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.2",
+    "source-map-loader": "^4.0.1",
+    "style-loader": "^3.3.2",
     "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.1"

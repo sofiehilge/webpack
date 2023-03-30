@@ -1,32 +1,20 @@
-// test ved at omskrive funktionen med const component = () => {}  // det er en test af babel, da dette ikke er en syntax browsere forstår, 
-//derfor kan vi på den måde teste om babel virker ved at skrive det sådan
+// denne her fil er webpacks entry point, den den kigger på for at finde kode som skal omskrives der er bredt supporteret i alle browsere
+import "./style.scss";
+import headerComponent from "./headerComponent.js";
+import jokeComponent from "./jokeComponent.js";
+import buttonComponent from "./buttonComponent";
+import footerComponent from "./footerComponent.js";
 
-import axios from "axios";
+headerComponent();
+jokeComponent(); // da funktionen invokeres uden for sit scope, bliver vi nødt til at invokere funktionen efter at have importeret den.
+//delay så componenterne bliver vist i den rækkefølge de bliver kaldt
+/* setTimeout(() => {
+    headerComponent();
+}, 1000) */
+//headerComponent();
+// dette er dog ikke den gode løsning.
+/* buttonComponent(); */
+footerComponent();
 
-axios.get('https://icanhazdadjoke.com/',{headers :{accept:"application/JSON"}})
-.then((response) => {
-  /*   fetch('https://icanhazdadjoke.com/') */
-
-  console.log(response)
-
-    const component =() => {
-         const element = document.createElement("div");
-    element.innerHTML= `${response.data.joke}`;
-    return element;
-    }
-document.body.appendChild(component());
-    }) 
-
-
-/* 
-function component () {
-    const element = document.createElement("div");
-    element.innerHTML= "Hello, webpack!";
-    return element;
-}; */
-
-
-
-// hvorfor er det nødvendigt at lægge oprettelsen af en div ind i en funktion?
-//fordi så kan den genbruges
-// og det er smart at have oprettelsen af elementer i et scope
+//MANGLER AT INSTALLERE INLINE SOURCE MAP LOAder
+//OBS vi veed ikke endnu hvordan man configurere webpack til at håndtere img-filer.

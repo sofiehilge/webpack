@@ -12,6 +12,7 @@ npm i webpack webpack-cli -D
 //npm install webpack webpack-cli debt-dependency
 
 4. -D står for Dev Dependency: Dev dependencies are modules which are only required during development whereas dependencies are required at runtime. Dependency er når projektet er afhængigt af det for at fungere. DevDependency er når udviklingsmiljøet er afhængigt af det, men ikke når appen køre.
+4a. opskrift: banananen er en dependency og opskriften er en devDependency, fordi det er helt umuligt at lave banankage uden banan
 
 5. efter installationen er der masser af filer i nodemodules - som skal i vores .gitignore -> skriv nodemodules
 
@@ -113,6 +114,10 @@ devServer: {
 - kør: npm install
 
 -> dette vil oprette nodemodules og hente alle filerne.
+
+27. vi er gået videre med at installere sass.
+
+28. se videoer
 
 ---Opfølgning på i går:
 
